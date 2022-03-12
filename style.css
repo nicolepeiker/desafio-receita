@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #494949;
+  color: #8d8c8c;
+  color: #c2c2c2;
+  margin: 0 auto;
+  font-size: 0.75rem;
+}
+
+.wrapper {
+  background-color: #332e2e;
+  height: 90%;
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.preparo {
+  margin-left: 30px;
+  margin-bottom: 2rem;
+  max-width: 50%;
+  position: relative;
+}
+
+.preparo h1 {
+  font-size: 3rem;
+  padding-top: 2rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+#starts {
+  margin-left: 0;
+  height: 2rem;
+  margin-bottom: 6rem;
+}
+
+.preparo h2 {
+  color: #c2c2c2;
+  font-family: 'Roboto Slab', serif;
+  margin-bottom: 2rem;
+}
+
+ol {
+  counter-reset: item;
+  margin-bottom: 2rem;
+}
+
+ol li {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+ol li::before {
+  content: counter(item) '. ';
+  counter-increment: item;
+  color: #ce8347;
+  font-size: 200%;
+}
+
+.prato {
+}
+
+.prato img {
+  height: 15rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 51vw;
+  top: 9rem;
+}
+
+.ingredientes {
+  background-color: #c2c2c2;
+  color: #3d3d3d;
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 6rem 1rem 2rem 3rem;
+  float: right;
+}
+
+.ingredientes h2 {
+  color: #3d3d3d;
+  font-family: 'Roboto Slab', serif;
+  margin-bottom: 2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  padding-left: 1em;
+  text-indent: -0.7em;
+  line-height: 2rem;
+  font-size: 0.85rem;
+}
+
+ul li::before {
+  content: '◎ ';
+  color: #ce8347;
+}
+
+footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+footer a {
+  color: #ce8347;
+}
+
+@media screen and (max-width: 1300px) {
+  .ingredientes {
+    padding: 17rem 1rem 1rem 1rem;
+  }
+  .wrapper {
+    min-width: 700px;
+  }
+}
+
+@media (max-width: 380px) {
+  .wrapper {
+    flex-direction: column;
+    min-width: 90%;
+  }
+  .preparo {
+    max-width: 80%;
+  }
+  #starts {
+    margin-bottom: 16rem;
+  }
+  .prato img {
+    left: 18vw;
+    top: 18rem;
+  }
+  .ingredientes {
+    padding-top: 1rem;
+  }
+}
